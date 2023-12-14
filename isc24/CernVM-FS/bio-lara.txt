@@ -1,0 +1,4 @@
+Lara Peeters is a Digital Art Historian, who holds master degrees in Art History (2021) and Digital Humanities (2022) from the KU Leuven (Belgium).
+
+Since May 2023, she is a member of the HPC team at Ghent University (Belgium) where she was hired to work on the EESSI project (https://www.eessi.io), 
+the European Environment for Scientific Software Installations, and the MultiXscale project (https://www.multixscale.eu), a EuroHPC JU Centre of Excellence in multiscale modelling.
