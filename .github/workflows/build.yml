@@ -10,7 +10,7 @@ jobs:
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@f1ca82cbed861b3534e2997dd584944f55b884ed
       with:
-        work_in_root_file_dir: isc24/EESSI/
+        working_directory: isc24/EESSI/
         root_file: main.tex
         args: "-output-directory=build -pdf"
         latexmk_shell_escape: true
@@ -18,4 +18,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: EasyBuild-ISC-tutorial
-        path: ./build/main.pdf
+        path: isc24/EESSI/build/main.pdf
