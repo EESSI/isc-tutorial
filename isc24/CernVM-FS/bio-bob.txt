@@ -1,0 +1,6 @@
+Bob Dröge graduated with a bachelor's degree in Mathematics and a bachelor's and master's degree in Computing Science from the University of Groningen.
+
+He has been working as a High Performance Computing specialist at the University of Groningen since 2011, where he is providing user support and training to the users of the university's HPC facilities.
+
+Besides this, he is one of the founders of and very actively involved in the EESSI project (https://eessi.io), and a partner in the MultiXscale EuroHPC Centre-of-Excellence (https://www.multixscale.eu/) since 2023.
+Finally, he is the work package lead for the Dutch Science Data Centre infrastructure as part of ESA's Euclid space mission (https://www.esa.int/Science_Exploration/Space_Science/Euclid).
