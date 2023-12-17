@@ -1,3 +1,27 @@
-CernVM-FS, the CernVM File System (also known as CVMFS), is a file distribution service that is particularly well suited to distribute software installations across a large number of systems world-wide in an efficient way.
+CernVM-FS is a file distribution service that is particularly well suited to distribute software installations across a large number of client systems in an efficient way.
 
-From an end user perspective, files in a CernVM-FS repository are available read-only via a subdirectory in /cvmfs, with a user experience similar to that of an on-demand streaming service for music or video, but then (mainly) applied to software installations.
+It provides several interesting features, including automatic and transparent on-demand downloading and updating of repository contents, multi-level caching, de-duplication of files, compression of data, and automatic verification of data integrity.
+From an end user perspective, files in a CernVM-FS repository are available read-only, with a user experience similar to that of an on-demand streaming service for music or video, but then (mainly) applied to software installations.
+
+CernVM-FS is a compelling solution for Continuous Delivery of software in HPC environments, since it has been proven to scale to billions of files and tens of thousands of clients. Once a software installation has been ingested in a CernVM-FS repository on a centrally managed server, it is
+automatically synchronized to a network of mirror servers and associated proxy servers.
+After a CernVM-FS repository has been made accessible on a system, no subsequent action must be taken by system administrators or end users to obtain updates to the contents of the repository, since that is done fully automatically by the client component of CernVM-FS via the network of mirror and proxy servers.
+
+This tutorial will introduce CernVM-FS through hands-on exercises and demos, and cover specific aspects that are relevant to using it in an HPC context, including HPC-specific configuration, troubleshooting, performance, and containers. The European Environment for Scientific Software
+Installations (EESSI) will serve as an example CernVM-FS repository.
+
+%Two prime examples of the use of CernVM-FS in an HPC context are the ComputeCanada software stack
+%(\url{https://docs.alliancecan.ca/wiki/Accessing_CVMFS/en}), and the European Environment for Scientific Software
+%Installations (EESSI, \url{https://eessi.io}).
+
+%The EESSI project in particular is interesting because it is a key component in the current MultiXscale EuroHPC Centre-of-Excellence, where it aims to set up a shared stack of optimized scientific software installations that can be used across all EuroHPC sites (and beyond). For end users and scientific partners in MultiXscale, it aims to provide a uniform user experience with respect to available scientific software, regardless of which system they use. The EESSI software stack should work on laptops, personal workstations, HPC clusters, and in the cloud, as long as they employ a compatible operating system (any Linux distribution), and system architecture (currently Intel or AMD CPUs and NVIDIA GPUs, in the future also Arm and RISC-V CPUs and other accelerators).
+
+%EESSI focuses not only on the performance of the software, but also on automating the workflow for maintaining the software stack, thoroughly testing the installations, and collaborating efficiently. EESSI, and many of its automation components, may be leveraged to facilitate CI/CD workflows: 
+
+%    EESSI can provide compilers, math libraries, MPI runtimes and other dependencies required for CI workflows in a way that is consistent (and predictable) between sites. 
+
+%    EESSI leverages CernVM-FS (https://cernvm.cern.ch/fs/) for its distribution. Integration of CernVM-FS at EuroHPC sites create the means to provide passive Continuous Delivery of application software. What this means is there does not need to be direct interaction with a site to have a new release of an application made available there: integration of a new application release in EESSI automatically implies the availability of that software on all systems where EESSI is available. 
+
+%    Integration of an application in EESSI automatically implies testing of that application across all of the architectures that EESSI supports, and automated reporting of issues with that testing in the EESSI repositories. The extent of the testing is dependent on the level of collaboration with the application developers but can go beyond correctness checks, e.g., including performance and scalability tests (such as is being done in the case of the applications from MultiXscale). 
+
+%EESSI is already available at EuroHPC sites Vega and Karolina, with discussions ongoing for supporting EESSI at various other EuroHPC sites.
