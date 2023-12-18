@@ -8,8 +8,8 @@
 
 \subsection*{Overview and Goals}
 
-Application developers, HPC sites, and end users around the world
-spend significant amounts of time to create and verify optimised software installations. Surveys conducted at the
+Application developers, HPC sites, and end users %around the world
+spend significant amounts of time on optimised software installations. Surveys conducted at the
 \emph{``Getting Scientific Software Installed''} Birds-of-a-Feather sessions that we (co-)organised at both SC and ISC
 reveal that this (still) involves a significant amount of `manual' effort.
 % (and thus time/manpower).
@@ -21,8 +21,8 @@ and only ~25\% automate environment module file generation.
 %Although the problems that arise with installing scientific software are ubiquitous,
 Despite these ubiquitous problems,
 there is still inadequate collaboration
-between HPC sites to date: less than 30\% of respondents answered `yes' when asked whether they
-work together with other HPC sites regarding the topic of software installation, even in most recent surveys.
+between HPC sites to date: less than 30\% of respondents indicated that they
+work together with other HPC sites regarding software installation, even in most recent surveys.
 %Since EasyBuild can help relieve these burdens and foster collaboration, a tutorial introducing this tool is highly relevant to ISC'22 attendees.
 Hence, an EESSI tutorial is very relevant to ISC'24 attendees as this tool helps relieve these burdens and fosters
 collaboration.
@@ -30,22 +30,23 @@ collaboration.
 %\comment{MG: Are these numbers still OK? I seem to remember that at SC'19 more people said that they were using Spack or EB.}
 %\comment{KH: 25\% Spack, 15\% EasyBuild, see slide 4 in \url{http://easybuilders.github.io/easybuild/files/SC19_GSSI_BoF/GSSI_SC19_Survey_results.pdf}; w.r.t. collaboration, it's about 33\% if you add "yes" and "sometimes" (see slide 10)}
 
-The main goal of this tutorial is to facilitate the daily work of its attendees.
+%The main goal of this tutorial is to facilitate the daily work of its attendees.
 % It will introduce EasyBuild as a tool for providing optimised, reproducible, multi-platform scientific software installations in a consistent, efficient, and user-friendly manner. We will explain the scope of EasyBuild and show attendees how to get started,
 % how to tap into some advanced features,
 % showcase its use on some large-scale systems,
 % and show how to engage with the EasyBuild community.
 
-The \textbf{European Environment for Scientific Software Installations (EESSI)} project is a collaborative project
+The \textbf{European Environment for Scientific Software Installations
+(EESSI)}\footnote{\href{https://eessi.io}{https://eessi.io}} project is a collaborative project
 between different partners in the HPC community supported by the MultiXscale EuroHPC Centre of Excellence to build a
 common stack of optimised scientific software installations for everything from laptops to big HPC systems and cloud
 infrastructures. The project uses EasyBuild to install software on top of a compatibility layer, and uses CernVM-FS to
-distribute the software installations to clients.
+distribute the software installations to client systems.
 
 EasyBuild is used by well over 100 HPC sites worldwide (incl. JSC, CSCS, the Digital Research Alliance of Canada, LUMI,
 \ldots),
 has over 125 unique contributors on a yearly basis,
-and an active Slack channel with about 700 members.
+and an active Slack channel with over 830 members.
 It has reached a critical mass with a welcoming and active community guaranteeing continued development and support, and
 a growing user community.
 %It has reached critical mass, a point where a large user base means more features and software being added regularly, with an accelerated adoption rate, and a welcoming and engaging community.
@@ -60,7 +61,7 @@ truly uniform software stack. It already has a wide spectrum of collaborators de
 EESSI is motivated by the observation that the landscape of computational science is changing in various ways.
 Additional families of general-purpose microprocessors including Arm 64-bit (aarch64) and RISC-V on top of th
 well-established Intel and AMD processors (both x86\_64), and different types of GPUS (NVIDIA, AMD, Intel) are
-increasing the diversity in system architectures. The Rapid expansion of computational science beyond traditional
+increasing the diversity in system architectures. The rapid expansion of computational science beyond traditional
 domains like physics and computational chemistry, including bioinformatis, Machine Learning (ML) and Artificial
 Intelligence (AI), etc. leads to a significant growth of the software stack that is used for running scientific
 workloads. The emergence of commercial cloud infrastructure (Amazon EC2, Microsoft Azure, ...) and private cloud
@@ -76,8 +77,8 @@ The main goal of EESSI is to provide a collection of scientific software install
 different platforms, including HPC clusters, cloud infrastructure, and personal workstations and laptops, without making
 compromises on the performance of that software.
 
-The software installations included in EESSI are optimized for specific generations of microprocessors by targeting a
-variety of instruction set architectures (ISAs), like for example Intel and AMD processors supporting the AVX2 or
+Software installations included in EESSI are optimized for specific generations of microprocessors by targeting a
+variety of instruction set architectures (ISAs), like for example \texttt{x86\_64} processors supporting the
 AVX-512 instructions, and Arm processors that support SVE instructions.
 
 To provide optimized installations of scientific software stacks for a diverse set of system architectures, the EESSI
@@ -85,7 +86,7 @@ project consists of 3 layers, which are constructed by leveraging various open s
 % the filesystem layer to distribute the software stack; the compatibility layer to level the ground across different client operating systems; the software layer to run optimized applications and provided their dependencies.
 \begin{itemize}
 \item The filesystem layer uses CernVM-FS to distribute the EESSI software stack to client systems
-\item The compatibility layer of EESSI levels the ground across different (versions of) the Linux operating system (OS)
+\item The compatibility layer levels the ground across different (versions of) the Linux operating system (OS)
       of client systems that use the software installations provided by EESSI. It consists of a limited set of libraries
       and tools that are installed in a non-standard filesystem location (a "prefix"), which were built from source for
       the supported CPU families using Gentoo Prefix.
@@ -95,7 +96,7 @@ project consists of 3 layers, which are constructed by leveraging various open s
       (scientific) software stacks on High-Performance Computing (HPC) systems. Next to installing the software itself,
       EasyBuild also automatically generates environment module files. These files, which are essentially small Lua
       scripts, are consumed via Lmod, a modern implementation of the concept of environment modules which provides a
-      user-friendly interface to end users of EESSI. The initialisation script that is included in the EESSI repository
+      user-friendly interface to end users of EESSI. The initialisation script that is included in EESSI
       automatically detects the CPU family and microarchitecture of a client system by leveraging either
       \texttt{archspec}, a small Python library, or \texttt{archdetect}, a minimal pure bash implementation of the same
       concept.
