@@ -6,10 +6,78 @@
 %- URLs to sample slides and other material\\
 %Upload Resume or CV of each presenter, including a list of the recently taught courses or tutorials (2 pages maximum per presenter). Please upload one pdf file that includes all presenters CVs.}
 
-\subsection*{Overview and Goals}
+\subsection*{Overview and hands-on aspects}
 
-FIXME
+This tutorial is intended for people with a background or interest in using a uniform software stack on
+High-Performance Computing (HPC) infrastructure, % (system administrators, support team members, end users, etc.),
+and who are new to CernVM-FS\footnote{\href{https://cernvm.cern.ch/fs}{https://cernvm.cern.ch/fs}}.
+No specific prior knowledge or experience with it is required.
+We expect it to be most valuable to people who are interested in using or providing access to one or more existing
+CernVM-FS repositories that provide a common software stack that can be used on HPC systems (and beyond).
 
+\paragraph{} 
+The tutorial will start by introducting CernVM-FS, explaining what it is exactly, and what it mainly used for
+(world-wide distribution of software installations). The main features that CernVM-FS provides will be covered in detail,
+specifically in the context of HPC, including:
+\begin{itemize}
+\item Automatic and transparent on-demand downloading repository contents;
+\item Automatic updating of repository contents as new software installations get added;
+\item Multi-level caching, to improve start-up performance of software;
+\item De-duplication of files and compression of data, which help with reducing required storage space and network traffic;
+\item Automatic verification of the integrity of repository contents that are downloaded on-demand;
+\end{itemize}
+
+The European Environment for Scientific Software Installations
+(EESSI)\footnote{\href{https://eessi.io}{https://eessi.io}}
+will be briefly presented as an example CernVM-FS repository.
+It will be used throughout the tutorial to demonstrate the configuration, usage, and features of CernVM-FS
+during the hands-on exercises and demos.
+
+\paragraph{} 
+After this introductory part of the tutorial, participants will be invited to install and configure a CernVM-FS
+client system themselves
+to get access to EESSI. This will be done on a prepared dedicated virtual machine (VM) in the cloud that can
+be accessed via SSH,
+on which the necessary (administrator) permissions are available to participants. The primary goal of this is to provide a hands-on experience
+with CernVM-FS, which will help significantly to grasp the concepts and features covered in the introductory part.
+
+Subsequently, we will show how to advance towards a more robust and production-ready CernVM-FS setup,
+by also explaining and demonstrating how to set up a mirror and proxy server for a CernVM-FS repository.
+Prepared installations of both a mirror and proxy server will be available, so participants can re-configure
+their CernVM-FS client system to employ them.
+
+\paragraph{}
+In the 2nd half of the tutorial, we will focus on more specific aspects of CernVM-FS, including:
+\begin{itemize}
+\item Configuration of CernVM-FS on HPC infrastructure, which covers how to use CernVM-FS on diskless or offline systems,
+      and how to access CernVM-FS repositories if CernVM-FS is not installed system-wide;
+\item Troubleshooting techniques, in case accessing a CernVM-FS repository does not work (anymore), or in case
+      large latencies are observed when using software provided via CernVM-FS repository;
+\item Performance aspects, primarily evaluating start-up performance of software, and how to mitigate slow software
+      start-up;
+\item Using containers technologies like Apptainer together with CernVM-FS;
+\end{itemize}
+
+Each of these aspects will be presented by means of examples and hands-on demos.
+Participants will be able to follow along in the prepared hands-on environment should they prefer doing so,
+but in the interest of time we will not reserve dedicated time for
+hands-on exercises during the 2nd part of the tutorial. However, the provided presentation material
+will be sufficiently detailed so participants can work through the hands-on demos themselves after the tutorial.
+
+We will briefly explain how to get started from scratch with CernVM-FS towards the end of the tutorial by presenting
+how to create a CernVM-FS repository and how to set up the necessary infrastructure to make it available,
+but this is not the primary goal of this tutorial.
+
+\subsection*{Motivation \& Goals}
+
+With this tutorial we want to introduce the participants to CernVM-FS in the context of HPC,
+and show how it is particularly well suited for providing a central software stack for HPC systems.
+In addition, we will demonstrate how it enables HPC support teams, software developers, and end users to
+collaborate on a shared software stack that can be used of a wide variety of systems, with EESSI as a prime example.
+
+We strongly believe that the knowledge being disseminated through this tutorial will be beneficial
+to a diverse group of conference attendees, ranging from experienced HPC system administrators to researchers
+who are just getting started with HPC, and additional profiles in between.
 
 %\paragraph{Content Level}
 %60\% introductory, 30\% intermediate, 10\% advanced
