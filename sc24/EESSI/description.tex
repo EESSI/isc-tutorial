@@ -24,7 +24,7 @@ there is still inadequate collaboration
 between HPC sites to date: less than 30\% of respondents indicated that they
 work together with other HPC sites regarding software installation, even in most recent surveys.
 %Since EasyBuild can help relieve these burdens and foster collaboration, a tutorial introducing this tool is highly relevant to ISC'22 attendees.
-Hence, an EESSI tutorial is very relevant to ISC'24 attendees as this tool helps relieve these burdens and fosters
+Hence, an EESSI tutorial is very relevant to SC'24 attendees as this tool helps relieve these burdens and fosters
 collaboration.
 % KH: updated to use survey results from SC19 (Tue Feb 11th 17:43 CET)
 %\comment{MG: Are these numbers still OK? I seem to remember that at SC'19 more people said that they were using Spack or EB.}
@@ -43,19 +43,29 @@ common stack of optimised scientific software installations for everything from 
 infrastructures. The project uses EasyBuild to install software on top of a compatibility layer, and uses CernVM-FS to
 distribute the software installations to client systems.
 
-EasyBuild is used by well over 100 HPC sites worldwide (incl. JSC, CSCS, the Digital Research Alliance of Canada, LUMI,
+The critical benefit is that \textbf{EESSI is providing the
+installations themselves}, not recipes: an end user does not need to perform an installation
+of the scientific software they wish to use. Environment modules are used as the user interface, and automatic
+detection of the target system architecture is done. This means that the binary files that make up the optimised
+scientific software that the users require are streamed (via CernVM-FS) to the platform as they are accessed. It brings
+all the benefits of a container environment without the need for a runtime, and in addition is automatically updated
+and customisable for the host.
+
+% EasyBuild is used by well over 100 HPC sites worldwide (incl. JSC, CSCS, the Digital Research Alliance of Canada, LUMI,
 \ldots),
-has over 125 unique contributors on a yearly basis,
-and an active Slack channel with over 830 members.
-It has reached a critical mass with a welcoming and active community guaranteeing continued development and support, and
-a growing user community.
+% has over 125 unique contributors on a yearly basis,
+% and an active Slack channel with over 830 members.
+% It has reached a critical mass with a welcoming and active community guaranteeing continued development and support, and
+% a growing user community.
 %It has reached critical mass, a point where a large user base means more features and software being added regularly, with an accelerated adoption rate, and a welcoming and engaging community.
 %Attendance at the yearly EasyBuild User Meetings has been growing steadily, with close to 100 attendees at the 7th (virtual) edition in Jan'22.
 %As such, we strongly believe that EasyBuild, and the community behind it, will have a positive impact on the attendees' work.
 % The tutorial content is designed to help with getting started quickly and benefit from EasyBuild right after the conference.
 %The tutorial content will be designed to help the attendees getting started with the tool, so they can immediately benefit from it after the conference.
 
-EESSI is an initiative built on the foundations of the EasyBuild community, and goes one step further by providing a
+EESSI is an initiative built on the foundations of the EasyBuild community (which is used by well over
+100 HPC sites worldwide (incl. JSC, CSCS, the Digital Research Alliance of Canada, LUMI,\ldots)), and goes one
+step further by providing a
 truly uniform software stack. It already has a wide spectrum of collaborators despite being a relatively young project.
 
 EESSI is motivated by the observation that the landscape of computational science is changing in various ways.
@@ -174,7 +184,7 @@ Moreover, the presenters have experience in organising tutorials in the context 
 %what is expected
 expectations
 and how to structure the material
-to help ISC attendees to get the most out of it.
+to help SC attendees to get the most out of it.
 
 %\paragraph{Sample slides}
 
