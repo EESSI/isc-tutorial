@@ -8,6 +8,10 @@ infrastructures.
 The project uses EasyBuild to install software on top of a compatibility layer, and uses CernVM-FS to
 distribute the software installations to client systems.
 
+EESSI is motivated by the observation that the landscape of computational science is changing in
+various ways: increasing hardware diversity, user community diversity, and the adoption of public and commercial cloud
+infrastructure by research communities.
+
 The critical benefit is that \textbf{EESSI is providing the
 installations themselves}, \textit{not} recipes: an end user does not need to perform an installation
 of the scientific software they wish to use.
@@ -20,25 +24,6 @@ EESSI is an initiative built on the foundations of the EasyBuild community (whic
 100 HPC sites worldwide (incl. JSC, CSCS, the Digital Research Alliance of Canada, LUMI,\ldots)), and goes one
 step further by providing a truly uniform software stack.
 It already has a wide spectrum of collaborators despite being a relatively young project.
-
-EESSI is motivated by the observation that the landscape of computational science is changing in various ways.
-Additional families of general-purpose microprocessors including Arm 64-bit (aarch64) and RISC-V on top of th
-well-established Intel and AMD processors (both x86\_64), and different types of GPUS (NVIDIA, AMD, Intel) are
-increasing the diversity in system architectures.
-The rapid expansion of computational science beyond traditional
-domains like physics and computational chemistry, including bioinformatics, Machine Learning (ML) and Artificial
-Intelligence (AI), etc. leads to a significant growth of the software stack that is used for running scientific
-workloads.
-The emergence of commercial cloud infrastructure (Amazon EC2, Microsoft Azure, ...) and private cloud
-infrastructure (OpenStack) has competitive advantages over on-premise infrastructure for computational workloads, such
-as near-instant availability, increased flexibility, a broader variety of hardware platforms, and faster access to new
-generations of microprocessors.
-In addition the manpower that is available in the HPC user support teams that are
-responsible for helping scientists with running the software they require on high-end (and complex) infrastructure like
-supercomputers (and beyond) is limited.
-These reasons indicate that there is a strong need for more collaboration on
-building and installing scientific software to avoid duplicate work across computational scientists and HPC user support
-teams.
 
 \subsection*{Tutorial Goals}
 
