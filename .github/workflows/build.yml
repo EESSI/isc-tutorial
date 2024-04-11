@@ -31,14 +31,14 @@ jobs:
       with:
         name: CVMFS-ISC24-tutorial
         path: isc24/CernVM-FS/build/main.pdf
-    - name: Compile LaTeX document (CernVM-FS)
+    - name: Compile LaTeX document (EESSI, SC24)
       uses: xu-cheng/latex-action@f1ca82cbed861b3534e2997dd584944f55b884ed
       with:
         working_directory: sc24/EESSI
         root_file: main.tex
         args: "-output-directory=build -pdf"
         latexmk_shell_escape: true
-    - name: Store produce PDFs (EESSI)
+    - name: Store produce PDFs (EESSI, SC24)
       uses: actions/upload-artifact@v4
       with:
         name: EESSI-SC24-tutorial
