@@ -5,20 +5,21 @@ The \textbf{European Environment for Scientific Software Installations
 between different partners in the HPC community supported by the MultiXscale EuroHPC Centre of Excellence to build a
 common stack of optimised scientific software installations for everything from laptops to big HPC systems and cloud
 infrastructures.
-The project uses EasyBuild to install software on top of a compatibility layer, and uses CernVM-FS to
+The project uses EasyBuild to install software on top of a compatibility layer (to give independence from the underlying
+OS), and uses CernVM-FS to
 distribute the software installations to client systems.
 
 EESSI is motivated by the observation that the landscape of computational science is changing in
-various ways: increasing hardware diversity, user community diversity, and the adoption of public and commercial cloud
+various ways: increasing hardware and user community diversity, and the adoption of public and commercial cloud
 infrastructure by research communities.
 
 The critical benefit is that \textbf{EESSI is providing the
-installations themselves}, \textit{not} recipes: an end user does not need to perform an installation
-of the scientific software they wish to use.
+installations themselves}, \textit{not} installation recipes.
 Environment modules are used as the user interface, and automatic
 detection of the target system architecture is done.
 This means that the binary files that make up the optimised
-scientific software installation that the users require are streamed (via CernVM-FS) to the platform as they are accessed.
+scientific software installation that the users require are streamed (via CernVM-FS) to the host
+platform as they are accessed.
 
 EESSI is an initiative built on the foundations of the EasyBuild community (which is used by well over
 100 HPC sites worldwide (incl. JSC, CSCS, the Digital Research Alliance of Canada, LUMI,\ldots)), and goes one
@@ -33,14 +34,11 @@ compromises on the performance of that software.
 
 The audience will learn how software installations included in EESSI are optimized for specific generations
 of microprocessors by targeting a
-variety of instruction set architectures (ISAs), like for example \texttt{x86\_64} processors supporting the
-AVX-512 instructions, and Arm processors that support SVE instructions.
+variety of instruction set architectures (ISAs). The will learn how to access EESSI in different ways such as native,
+in a production HPC setup as well as inside containers.
 
-The will learn how to access EESSI in different ways such as native, in a production HPC setup as well as inside
-containers.
-
-The hands-on components will showcase the use cases of EESSI, how to adding support for new software,
-troubleshooting, GPU support, selected advanced features, and how they can contribute to EESSI.
+The hands-on components will showcase the use cases of EESSI, how to add support for new software,
+troubleshooting, GPU support, and how they can contribute to EESSI.
 % They will also learn that EESSI
 % project consists of 3 layers, which are constructed by leveraging various open source software projects:
 % \begin{itemize}
@@ -123,5 +121,5 @@ The tutorial is based on previous tutorials archived at
 but will be updated with new developments in EESSI and EasyBuild.
 This tutorial will also be made available on that site, and will also refer to the EESSI documentation on
 \url{https://www.eessi.io/docs}.
-It should be noted that even though this tutorial has never been presented at SC, all the authors have extensive
+While this tutorial has never been presented at SC, the authors have extensive
 experience in other tutorials and workshops, both inside and outside the SC and ISC conference series.
