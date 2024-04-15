@@ -1,0 +1,102 @@
+\documentclass[a4paper,11pt]{article}
+
+% Allow coloured url links and hyperlinked table of contents etc....
+\usepackage[colorlinks=true, linkcolor=gray,  urlcolor=blue, citecolor=black]{hyperref}
+\usepackage{authblk}
+\usepackage{todonotes}
+
+\usepackage{enumitem}
+\setlist{itemsep=2pt, parsep=2pt}
+
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.6in}
+\setlength{\topmargin}{0.0in}
+\setlength{\headheight}{0.0in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+
+\newcommand{\ignore}[1]{}
+
+\newif\ifremark
+\long\def\remark#1{
+\ifremark%
+        \begingroup%
+        \dimen0=\columnwidth
+        \advance\dimen0 by -1in%
+        \setbox0=\hbox{\parbox[b]{\dimen0}{\protect\em #1}}
+        \dimen1=\ht0\advance\dimen1 by 2pt%
+        \dimen2=\dp0\advance\dimen2 by 2pt%
+        \vskip 0.25pt%
+        \hbox to \columnwidth{%
+                \vrule height\dimen1 width 3pt depth\dimen2%
+                \hss\copy0\hss%
+                \vrule height\dimen1 width 3pt depth\dimen2%
+        }%
+        \endgroup%
+\fi}
+
+\remarktrue
+%%\remarkfalse
+
+\newenvironment{myenumerate}
+{ \begin{enumerate}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{enumerate}                  } 
+
+\renewcommand{\baselinestretch}{0.95}
+\newcommand{\comment}[1]{\todo[inline]{#1}}
+
+
+\begin{document}
+
+%===============================================================================
+
+\title{
+    \textbf{\LARGE Streaming Optimised Scientific Software: an Introduction to EESSI}\\
+\vspace{2mm}{\Large \emph{SC'24 tutorial proposal}}
+}
+
+\date{}
+
+% \author[1]{Sebastian Achilles}
+\author[1]{Kenneth Hoste}
+\author[2]{Alan \'O Cais}
+% \affil[1]{J\"ulich Supercomputing Centre, Forschungszentrum J\"ulich GmbH, Germany}
+\affil[1]{HPC-UGent, Ghent University, Belgium}
+\affil[2]{Centre Européen de Calcul Atomique et Moléculaire (CECAM), Switzerland}
+
+
+\renewcommand\Authands{ and }
+
+\maketitle
+
+%===============================================================================
+
+\section*{Abstract}
+\input{abstract.tex}
+
+\paragraph{Topic area:} Programming Environments \& System Software, Introductory Tutorial
+
+\paragraph{Keywords:} Computing Infrastructure, Containers in HPC, Reproducibility, Scientific Software Development, System Software \& Runtime Systems
+
+
+%===============================================================================
+\newpage
+\input{description.tex}  % 2 pages max
+\input{handson.tex} % an additional 0.5 page
+
+\include{outline.tex}
+% \input{attendance.tex}  % Not requested for SC24
+
+\include{cvs.tex}
+\newpage
+
+\subsection*{Release Statement}
+
+The presenters agree to release the notes and relevant training material for the SC24 tutorial digital copy.
+
+\input{travelsupport.tex}
+
+\end{document}

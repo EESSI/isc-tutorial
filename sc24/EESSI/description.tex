@@ -1,0 +1,125 @@
+\section*{Tutorial description}
+
+The \textbf{European Environment for Scientific Software Installations
+(EESSI)}\footnote{\href{https://eessi.io}{https://eessi.io}} project is a collaborative project
+between different partners in the HPC community supported by the MultiXscale EuroHPC Centre of Excellence to build a
+common stack of optimised scientific software installations for everything from laptops to big HPC systems and cloud
+infrastructures.
+The project uses EasyBuild to install software on top of a compatibility layer (to give independence from the underlying
+OS), and uses CernVM-FS to
+distribute the software installations to client systems.
+
+EESSI is motivated by the observation that the landscape of computational science is changing in
+various ways: increasing hardware and user community diversity, and the adoption of public and commercial cloud
+infrastructure by research communities.
+
+The critical benefit is that \textbf{EESSI is providing the
+installations themselves}, \textit{not} installation recipes.
+Environment modules are used as the user interface, and automatic
+detection of the target system architecture is done.
+This means that the binary files that make up the optimised
+scientific software installation that the users require are streamed (via CernVM-FS) to the host
+platform as they are accessed.
+
+EESSI is an initiative built on the foundations of the EasyBuild community (which is used by well over
+100 HPC sites worldwide (incl. JSC, CSCS, the Digital Research Alliance of Canada, LUMI,\ldots)), and goes one
+step further by providing a truly uniform software stack.
+It already has a wide spectrum of collaborators despite being a relatively young project.
+
+\subsection*{Tutorial Goals}
+
+EESSI provides a collection of scientific software installations that work across a wide range of
+different platforms, including HPC clusters, cloud infrastructure, and personal workstations and laptops, without making
+compromises on the performance of that software.
+
+The audience will learn how software installations included in EESSI are optimized for specific generations
+of microprocessors by targeting a
+variety of instruction set architectures (ISAs). The will learn how to access EESSI in different ways such as native,
+in a production HPC setup as well as inside containers.
+
+The hands-on components will showcase the use cases of EESSI, how to add support for new software,
+troubleshooting, GPU support, and how they can contribute to EESSI.
+% They will also learn that EESSI
+% project consists of 3 layers, which are constructed by leveraging various open source software projects:
+% \begin{itemize}
+% \item The filesystem layer uses CernVM-FS to distribute the EESSI software stack to client systems
+% \item The compatibility layer levels the ground across different (versions of) the Linux operating system (OS)
+%       of client systems that use the software installations provided by EESSI. It consists of a limited set of libraries
+%       and tools that are installed in a non-standard filesystem location (a "prefix"), which were built from source for
+%       the supported CPU families using Gentoo Prefix.
+% \item The top layer of EESSI is called the software layer, which contains the actual scientific software applications
+%       and their dependencies.
+%       Building, managing, and optimising the software installations included in the software
+%       layer is done using EasyBuild, a well-established software build and installation framework for managing
+%       (scientific) software stacks on High-Performance Computing (HPC) systems. Environment modules provides a
+%       user-friendly interface to end users of EESSI. The initialisation script that is included in EESSI
+%       automatically detects the CPU family and microarchitecture of a client system by leveraging the bash tool
+%       \texttt{archdetect}.
+% \end{itemize}
+
+\subsection*{Relevance for conference attendees}
+
+Application developers, HPC sites, and end users %around the world
+spend significant amounts of time on optimised software installations. Surveys conducted at the
+\emph{``Getting Scientific Software Installed''} Birds-of-a-Feather sessions that we (co-)organised at both SC and ISC
+reveal that this (still) involves a significant amount of `manual' effort.
+In the SC'19 survey,
+less than half of the respondents consistently automate software installation,
+and only ~25\% automate environment module file generation.
+Despite these ubiquitous problems,
+there is still inadequate collaboration
+between HPC sites to date: less than 30\% of respondents indicated that they
+work together with other HPC sites regarding software installation, even in most recent surveys.
+Hence, an EESSI tutorial is very relevant to SC'24 attendees as this tool helps relieve these burdens and fosters
+collaboration.
+
+\subsection*{Target audience}
+This tutorial is intended for
+\begin{itemize}
+    \item End users who want to empower themselves to use a uniform software stack without compromising on
+          performance, on top of what is provided centrally by the HPC support team;
+    \item System managers, administrators and user support teams, responsible for operational aspects of HPC systems \&
+          concerned about hardware-optimised scientific software installations;
+    \item Cloud \& CI users, who want to use a common stack of optimised scientific software;
+    \item System manufacturers and integrators interested in state-of-the-art software installation tools, who want to
+          leverage the collective expertise incorporated in EESSI and EasyBuild.
+\end{itemize}
+
+\subsection*{Content level}
+60\% beginner, 40\% intermediate
+
+\subsection*{Audience Prerequisites}
+Attendees wishing to participate in the guided examples are expected to use their
+own notebook computers with a working SSH client.
+
+Detailed information on how to prepare for this tutorial will be provided
+through the tutorial website, similar to
+\url{https://tutorial.easybuild.io/2022-isc22/practical_info/}.
+
+\subsection*{Tutorial content}
+The tutorial covers several critical aspects of EESSI, including its motivation, goals, and high-level design, as
+demonstrated through hands-on demonstrations and guided illustrations. The main features and functionalities of EESSI
+are highlighted, as well as the different ways to access the software stack, such as native installation, use in an HPC
+production setup, or without administrator privileges. The tutorial also covers various use cases for EESSI, including
+portable workflows, integration into a CI environment, adding software to the EESSI, and also configuring GPU support.
+Extensive instructor-led examples are used to put the theoretical knowledge into practice.
+
+\subsection*{Cohesion measures}
+The organisers have successfully worked together on a number of papers, presentation materials,
+and hands-on tutorials on the topic under consideration several times in recent years.
+A common template
+will guarantee
+a coherent visual appearance, and using our previous experience, we will provide high-quality content and materials.
+Moreover, the presenters have experience in organising tutorials in the context of SC and ISC, which helps to understand
+expectations
+and how to structure the material
+to help SC attendees to get the most out of it.
+
+\subsection*{Previous editions and potential updates}
+The tutorial is based on previous tutorials archived at
+\url{https://github.com/EESSI/docs/tree/main/talks/20231205-Introduction-to-EESSI-CASTIEL2},
+but will be updated with new developments in EESSI and EasyBuild.
+This tutorial will also be made available on that site, and will also refer to the EESSI documentation on
+\url{https://www.eessi.io/docs}.
+While this tutorial has never been presented at SC, the authors have extensive
+experience in other tutorials and workshops, both inside and outside the SC and ISC conference series.
