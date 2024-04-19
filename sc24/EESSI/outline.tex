@@ -1,35 +1,68 @@
-% Note they say "This “detailed course outline” will be the most critical part of the submission", so this probably
-% deserves more love
-
 \subsection*{Outline}
 
 We believe that a half-day format would be most appropriate for this tutorial, as it would allow ample time for guided
-examples and hands-on practice, in addition to providing a comprehensive overview of EESSI. The tutorial outline for the half-day format is included below.
+examples and hands-on practice, in addition to providing a comprehensive overview of EESSI.
 
+The tutorial outline for the half-day format is included below.
+Parts that include hands-on activity are indicated as such.
+Attendees will be invited to follow along with hands-on demos in a prepared environment that they will get access to.
 
 \subsubsection*{Half-day format, 3 hours of tutorial content}
 
 \begin{itemize}[style=standard, labelwidth=1.9cm]
 
 
-    \item [00:00-00:30] \emph{(30min)} Introduction to EESSI
-     \begin{itemize}
-         \item Motivation + goals (10min)
-         \item High-level design + inspiration (15min)
-         \item EuroHPC MultiXscale CoE (funding) (5min)
-     \end{itemize}
-    \item [00:30-01:00] \emph{(30min)} Using EESSI, incl. hands-on
-     \begin{itemize}
-         \item Using a native installation (10min)
-         \item Hands-on (15min)
-         \item Alternative access mechanisms: containers, cvmfsexec (5min)
-     \end{itemize}
-    \item [01:00-01:30] \emph{(30min)} Use cases (workflows, CI), incl. hands-on
-    \item [01:30-02:00] \emph{(30min coffee break)}
-    \item [02:00-02:15] \emph{(15min)} Testing software in EESSI  % AOC: Drop this to recover time?
-    \item [02:15-02:45] \emph{(30min)} Adding software to EESSI, incl. hands-on
-    \item [02:45-03:10] \emph{(25min)} GPU support, incl. hands-on
-    \item [03:10-03:20] \emph{(10min)} EESSI community
-    \item [03:20-03:30] \emph{(10min)} Q\&A + closing remarks
+    \item [00:00-00:10] \emph{(30min)} \textbf{Tutorial outline + Practical info}
+
+        To kick off the tutorial, we will briefly outline the contents of the tutorial,
+        and provide practical information on accessing and using the prepared environment.
+
+        Attendees will be able to access the prepared environment through a standard internet browser,
+        without the need to install any software.
+
+    \item [00:10-00:40] \emph{(30min)} \textbf{Introduction to EESSI}
+
+        We will start with a general introduction to the European Environment for Scientific Software
+        Installations (EESSI), which covers the motivation, goals, and high-level design of the project.
+
+        We will also briefly cover the relation to the MultiXscale EuroHPC Centre-of-Excellence,
+        which is currently funding the development effort for EESSI.
+
+    \item [00:40-01:10] \emph{(30min)} \textbf{Using EESSI} \emph{(hands-on)}
+
+        In the first hands-on part, we will focus on the user experience of EESSI.
+        Attendees will learn how they can start using the rich software stack provided by EESSI.
+
+        We will also briefly cover the different ways of accessing EESSI: through native installation
+        of CernVM-FS, via a container, or via the \texttt{cvmfsexec} tool.
+
+        In the prepared environment, a native installation of CernVM-FS that provides access to EESSI
+        will be readily available.
+
+    \item [01:10-01:30] \emph{(20min)} \textbf{Use cases (workflows, CI)} \emph{(hands-on)}
+
+        After covering the basic usage of EESSI, we will demonstrate additional use cases that
+        are enabled by EESSI, including running workflows, and using EESSI in CI environments.
+
+ \item [01:30-02:00] \emph{(30min coffee break)}
+
+ \item [02:00-02:45] \emph{(45min)} \textbf{Adding software to EESSI} \emph{(hands-on)}
+
+        In this part, we will present and demonstrate the semi-automatic procedure for adding software to EESSI.
+        Attendees will be able to follow along with a prepared example by stepping through the procedure in a guided
+        way.
+
+ \item [02:45-03:15] \emph{(30min)} \textbf{Beyond the basics: GPU support, test suite, etc.} \emph{(hands-on)}
+
+        To wrap up the technical content of the tutorial, we will briefly cover a number of aspects of EESSI that go beyond the
+        basics. This includes a detailed overview of how GPUs are supported in EESSI, and covering the goals and usage
+        of the portable test suite that is developed in the scope of the project.
+
+        Attendees will be able to follow along with guided examples.
+
+ \item [03:15-03:30] \emph{(15min)} \textbf{EESSI community + closing remarks + Q\&A}
+
+        To conclude the tutorial, we will briefly present how to get in touch with the EESSI community,
+        present concluding remarks, and answer (additional) questions raised by attendees.
 
 \end{itemize}
