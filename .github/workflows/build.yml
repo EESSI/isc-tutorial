@@ -10,15 +10,15 @@ jobs:
     - name: Compile LaTeX document (EESSI)
       uses: xu-cheng/latex-action@f1ca82cbed861b3534e2997dd584944f55b884ed
       with:
-        working_directory: isc24/EESSI/
+        working_directory: isc25/EESSI/
         root_file: main.tex
         args: "-output-directory=build -pdf"
         latexmk_shell_escape: true
     - name: Store produce PDFs (EESSI)
       uses: actions/upload-artifact@v4
       with:
-        name: EESSI-ISC24-tutorial
-        path: isc24/EESSI/build/main.pdf
+        name: EESSI-ISC25-tutorial
+        path: isc25/EESSI/build/main.pdf
     - name: Compile LaTeX document (CernVM-FS)
       uses: xu-cheng/latex-action@f1ca82cbed861b3534e2997dd584944f55b884ed
       with:
