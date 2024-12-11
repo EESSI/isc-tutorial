@@ -9,32 +9,22 @@
 \subsection*{Overview and Goals}
 
 Application developers, HPC sites, and end users %around the world
-spend significant amounts of time on optimised software installations. Surveys conducted at the
-\emph{``Getting Scientific Software Installed''} Birds-of-a-Feather sessions that we (co-)organised at both SC and ISC
-reveal that this (still) involves a significant amount of `manual' effort.
-% (and thus time/manpower).
-In the SC'19 survey,
-%In the most recent survey (SC'19),
-less than half of the respondents consistently automate software installation,
-and only ~25\% automate environment module file generation.
-%and only ~25\% automatically generate environment module files consistently, as opposed to composing them manually.
-%Although the problems that arise with installing scientific software are ubiquitous,
-Despite these ubiquitous problems,
-there is still inadequate collaboration
-between HPC sites to date: less than 30\% of respondents indicated that they
-work together with other HPC sites regarding software installation, even in most recent surveys.
-%Since EasyBuild can help relieve these burdens and foster collaboration, a tutorial introducing this tool is highly relevant to ISC'22 attendees.
-Hence, an EESSI tutorial is very relevant to ISC'25 attendees as this tool helps relieve these burdens and fosters
-collaboration.
-% KH: updated to use survey results from SC19 (Tue Feb 11th 17:43 CET)
-%\comment{MG: Are these numbers still OK? I seem to remember that at SC'19 more people said that they were using Spack or EB.}
-%\comment{KH: 25\% Spack, 15\% EasyBuild, see slide 4 in \url{http://easybuilders.github.io/easybuild/files/SC19_GSSI_BoF/GSSI_SC19_Survey_results.pdf}; w.r.t. collaboration, it's about 33\% if you add "yes" and "sometimes" (see slide 10)}
-
-%The main goal of this tutorial is to facilitate the daily work of its attendees.
-% It will introduce EasyBuild as a tool for providing optimised, reproducible, multi-platform scientific software installations in a consistent, efficient, and user-friendly manner. We will explain the scope of EasyBuild and show attendees how to get started,
-% how to tap into some advanced features,
-% showcase its use on some large-scale systems,
-% and show how to engage with the EasyBuild community.
+spend significant amounts of time on optimised software installations.
+Much of this effort is repeatedly duplicated, not just \emph{between}
+individuals but also by the individuals themselves as they reinstall
+the software they need for all of the computational platforms they have access to. 
+%Surveys conducted at the
+%\emph{``Getting Scientific Software Installed''} Birds-of-a-Feather sessions that we (co-)organised at both SC and ISC
+%reveal that this (still) involves a significant amount of `manual' effort.
+% In the SC'19 survey,
+% less than half of the respondents consistently automate software installation,
+% and only ~25\% automate environment module file generation.
+% Despite these ubiquitous problems,
+% there is still inadequate collaboration
+% between HPC sites to date: less than 30\% of respondents indicated that they
+% work together with other HPC sites regarding software installation, even in most recent surveys.
+% Hence, an EESSI tutorial is very relevant to ISC'25 attendees as this tool helps relieve these burdens and fosters
+% collaboration.
 
 The \textbf{European Environment for Scientific Software Installations
 (EESSI)}\footnote{\href{https://eessi.io}{https://eessi.io}} project is a collaborative project
@@ -62,18 +52,18 @@ EESSI is motivated by the observation that the landscape of computational scienc
 Additional families of general-purpose microprocessors including Arm 64-bit (aarch64) and RISC-V on top of th
 well-established Intel and AMD processors (both x86\_64), and different types of GPUS (NVIDIA, AMD, Intel) are
 increasing the diversity in system architectures. The rapid expansion of computational science beyond traditional
-domains like physics and computational chemistry, including bioinformatis, Machine Learning (ML) and Artificial
+domains like physics and computational chemistry, including bioinformatics, Machine Learning (ML) and Artificial
 Intelligence (AI), etc. leads to a significant growth of the software stack that is used for running scientific
 workloads. The emergence of commercial cloud infrastructure (Amazon EC2, Microsoft Azure, ...) and private cloud
 infrastructure (OpenStack) has competitive advantages over on-premise infrastructure for computational workloads, such
 as near-instant availability, increased flexibility, a broader variety of hardware platforms, and faster access to new
-generations of microprocessors. In addition the manpower that is available in the HPC user support teams that are
-responsible for helping scientists with running the software they require on high-end (and complex) infrastructure like
+generations of microprocessors. However, the manpower that is available in the HPC user support teams that are
+responsible for helping scientists with running the software they require on high-end and complex infrastructure like
 supercomputers (and beyond) is limited. These reasons indicate that there is a strong need for more collaboration on
-building and installing scientific software to avoid duplicate work across computational scientists and HPC user support
+building and installing scientific software to avoid duplicate work among computational scientists and HPC user support
 teams.
 
-The main goal of EESSI is to provide a collection of scientific software installations that work across a wide range of
+The main goal of EESSI is to provide a collection of scientific software \emph{installations} that work across a wide range of
 different platforms, including HPC clusters, cloud infrastructure, and personal workstations and laptops, without making
 compromises on the performance of that software.
 
@@ -90,7 +80,7 @@ project consists of 3 layers, which are constructed by leveraging various open s
       of client systems that use the software installations provided by EESSI. It consists of a limited set of libraries
       and tools that are installed in a non-standard filesystem location (a "prefix"), which were built from source for
       the supported CPU families using Gentoo Prefix.
-\item The top layer of EESSI is called the software layer, which contains the actual scientific software applications
+\item The user-facing layer of EESSI is called the software layer, which contains the actual scientific software applications
       and their dependencies. Building, managing, and optimising the software installations included in the software
       layer is done using EasyBuild, a well-established software build and installation framework for managing
       (scientific) software stacks on High-Performance Computing (HPC) systems. Next to installing the software itself,
