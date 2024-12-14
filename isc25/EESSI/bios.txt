@@ -1,0 +1,56 @@
+# Kenneth
+
+Kenneth Hoste holds a Masters (2005) and PhD (2010) in Computer Science from Ghent University (Belgium). His dissertation topic was "Analysis, Estimation and Optimization of Computer System Performance Using Machine Learning".
+
+Since October 2010, he is a member of the HPC team at Ghent University where he is mainly responsible for user support & training. He is the lead developer of EasyBuild since 2011, a software build and installation framework for (scientific) software on HPC systems, an active contributor in the European Environment for Scientific Software Installations (EESSI) project since 2020, and a partner in the MultiXscale EuroHPC Centre-of-Excellence since 2023. He enjoys (co-)organizing workshops and meetups, like the EasyBuild User Meetings (yearly since 2016) and the HPC, Big Data & Data Science devroom at FOSDEM (since 2014).
+
+
+# Lara
+
+Lara Peeters is a Digital Art Historian, who holds master degrees in Art History (2021) and Digital Humanities (2022) from the KU Leuven (Belgium).
+
+Since May 2023, she is a member of the HPC team at Ghent University (Belgium) where she was hired to work on the EESSI project (https://www.eessi.io), the European Environment for Scientific Software Installations, and the MultiXscale project (https://www.multixscale.eu), a EuroHPC JU Centre of Excellence in multiscale modelling.
+
+
+# Alan
+
+Dr. Alan O'Cais is currently the technical manager of MultiXscale, an EuroHPC centre of Excellence. He previously acted as the Software Manager of E-CAM, an EU Centre of Excellence in computing applications, while at Juelich Supercomputing Centre (JSC). He has previously managed the user software and application environment on the multi-PFlop JURECA hybrid cluster system at JSC. Between 2010 and 2015 he was primarily focused within the LinkSCEEM-2 project helping to develop a Virtual Research Community in Computational Science in the Eastern Mediterranean region. He has held research positions at Trinity College and the University of Adelaide. In 2008 he joined the Cyprus Institute as Scientific Coordinator of the Computation-based Science and Technology Research Centre (CaSToRC). He has worked at the Juelich Supercomputing Centre from 2010 to 2021 and at the University of Barcelona (with an affiliation to CECAM) from 2022.
+
+
+# Sebastian
+
+Sebastian Achilles presently holds the role of High Performance Computing (HPC) and Cloud System Engineer at Juelich Supercomputing Centre. He leads the team responsible for managing the user software and application environment on the supercomputers installed at Juelich, which rank among Europe's most powerful systems. He obtained his Master's degree in Simulations Sciences from RWTH Aachen University in the year 2017. Since 2021, he has been a maintainer of EasyBuild, an open source software build and installation framework for (scientific) software on High Performance Computing systems.
+
+
+# Bob
+
+Bob Dröge graduated with a bachelor's degree in Mathematics and a bachelor's and master's degree in Computing Science from the University of Groningen.
+
+He has been working as a High Performance Computing specialist at the University of Groningen since 2011, where he is providing user support and training to the users of the university's HPC facilities.
+
+Besides this, he is one of the founders of and very actively involved in the EESSI project (https://eessi.io) since 2020, and a partner in the MultiXscale EuroHPC Centre-of-Excellence (https://www.multixscale.eu) since 2023. Finally, he is the work package lead for the Dutch Science Data Centre infrastructure as part of ESA's Euclid space mission (https://www.esa.int/Science_Exploration/Space_Science/Euclid).
+
+
+# Eli
+
+Elisabeth Ortega-Carrasco is the Research, Development, and Innovation Manager at Do IT Now, and a co-founder of the MAR chapter, a South European chapter of the Women in HPC initiative. With her extensive STEM background and profound expertise in high-performance computing (HPC), she is the driving force behind the human aspect of technological advancements. As a leader in R&D&I, her primary mission is to explore emerging trends in HPC utilization from both industry and academia. Her educational journey is multifaceted, encompassing a PhD and an MSc in theoretical and computational chemistry, and a recent MSc in quantum computing.
+
+
+# Helena
+
+Helena Vela holds a degree in computer science with a specialization in computer engineering from the Barcelona School of Informatics (UPC-FIB). She has valuable experience in the HPC field, having participated in the Student Cluster Competition, worked as a member of the operations team at the Barcelona Supercomputing Center-Centro Nacional de Supercomputación (BSC-CNS), and, currently, working as a computational scientist at HPCNow! Her work focuses on user support, infrastructure and software installation, as well as supporting communities for the dissemination and promotion of the presence of women in the sector. She organizes open days, trainings and other activities, including courses aimed at women and underrepresented minorities for organizations such as Women in HPC.
+
+
+# Laura
+
+Laura Promberger is a senior fellow at CERN, working as a software engineer on CernVM File System. Laura received her Phd in 2022 in Computer Science from Heidelberg University (Germany). Her dissertation topic was "Compute, Storage and Throughput Trade-offs for High-Energy Physics Data Acquisition". During her Master studies she worked as a research assistant to optimize material science simulations for HPC.
+
+
+# Valentin
+
+Valentin Völkl holds a Masters (2015) and PhD (2021) in Physics from Innsbruck University (Austria). After a master thesis in quantum computing, he switched to particle physics and helped plan a post-LHC collider option - with a dissertation titled "Timed Track Reconstruction for the Future Circular Collider", and contributions to the Key4hep project, a common software stack for future high-energy physics experiments. Since 2023, he is the lead developer of the CernVM File System developer team at CERN.
+
+
+# Jakob
+
+Jakob Blomer is a staff member in the scientific software group at CERN. He is the original author of the CernVM File System. Jakob received a PhD in computer science from the Technical University of Munich in 2012. Afterwards he was a Marie-Curie fellow at CERN and a visiting scholar at the RAMCloud research group at Stanford University. Besides his work on CernVM-FS, Jakob is leading the R&D on the future event data I/O for experiments at the CERN LHC.
