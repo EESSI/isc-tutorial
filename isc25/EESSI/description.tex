@@ -9,7 +9,7 @@
 \subsection*{Overview and Goals}
 
 Application developers, HPC sites, and end users %around the world
-spend significant amounts of time on optimised software installations.
+spend significant amounts of time on optimising software installations.
 Much of this effort is repeatedly duplicated, not just \emph{between}
 individuals but also by the individuals themselves as they reinstall
 the software they need for all of the computational platforms they have access to. 
@@ -26,27 +26,21 @@ the software they need for all of the computational platforms they have access t
 % Hence, an EESSI tutorial is very relevant to ISC'25 attendees as this tool helps relieve these burdens and fosters
 % collaboration.
 
-The \textbf{European Environment for Scientific Software Installations
-(EESSI)}\footnote{\href{https://eessi.io}{https://eessi.io}} project is a collaborative project
-between different partners in the HPC community supported by the MultiXscale EuroHPC Centre of Excellence to build a
+The \textbf{European Environment for Scientific Software Installations (EESSI)}\footnote{\href{https://eessi.io}{https://eessi.io}}
+project is a collaborative project
+between different partners in the HPC community (and supported by the MultiXscale EuroHPC Centre of
+Excellence\footnote{\href{https://multixscale.eu}{https://multixscale.eu}}) to build a
 common stack of optimised scientific software installations for everything from laptops to big HPC systems and cloud
-infrastructures. The project uses EasyBuild to install software on top of a compatibility layer, and uses CernVM-FS to
-distribute the software installations to client systems.
+infrastructures. The project uses EasyBuild\footnote{\href{https://easybuild.io}{https://easybuild.io}} to install
+software on top of a compatibility layer, and leverages CernVM-FS\footnote{\href{https://cernvm.cern.ch/fs}{https://cernvm.cern.ch/fs}} to
+distribute the software installations to client systems. In 2024, it was selected as winner of the HPCwire Readers’ Choice Awards
+in the "Best HPC Programming Tool or Technology"
+category.\footnote{\href{https://www.eessi.io/docs/blog/2024/11/18/hpcwire-readers-choice-awards-2024-for-eessi/}{https://www.eessi.io/docs/blog/2024/11/18/hpcwire-readers-choice-awards-2024-for-eessi/}}
 
-EasyBuild is used by well over 100 HPC sites worldwide (incl. JSC, CSCS, the Digital Research Alliance of Canada, LUMI,
-\ldots),
-has over 125 unique contributors on a yearly basis,
-and an active Slack channel with over 950 members.
-It has reached a critical mass with a welcoming and active community guaranteeing continued development and support, and
-a growing user community.
-%It has reached critical mass, a point where a large user base means more features and software being added regularly, with an accelerated adoption rate, and a welcoming and engaging community.
-%Attendance at the yearly EasyBuild User Meetings has been growing steadily, with close to 100 attendees at the 7th (virtual) edition in Jan'22.
-%As such, we strongly believe that EasyBuild, and the community behind it, will have a positive impact on the attendees' work.
-% The tutorial content is designed to help with getting started quickly and benefit from EasyBuild right after the conference.
-%The tutorial content will be designed to help the attendees getting started with the tool, so they can immediately benefit from it after the conference.
-
-EESSI is an initiative built on the foundations of the EasyBuild community, and goes one step further by providing a
-truly uniform software stack. It already has a wide spectrum of collaborators despite being a relatively young project. EESSI won the HPCwire Readers’ Choice Awards 2024 as Best HPC Programming Tool or Technology. \footnote{\href{https://www.hpcwire.com/2024-readers-editors-choice-best-hpc-programming-tool-or-technology/}{https://www.hpcwire.com/2024-readers-editors-choice-best-hpc-programming-tool-or-technology/}}
+EESSI is an initiative built on the foundations of the EasyBuild community, which is used by well over 100 HPC sites worldwide
+(incl. JSC, CSCS, the Digital Research Alliance of Canada, LUMI, \ldots), and goes one step further by providing a
+truly uniform software stack. It already has a wide spectrum of collaborators including SURF, BSC, Ghent University, etc.,
+despite being a relatively young project.
 
 EESSI is motivated by the observation that the landscape of computational science is changing in various ways.
 Additional families of general-purpose microprocessors including Arm 64-bit (aarch64) and RISC-V on top of th
@@ -75,9 +69,9 @@ To provide optimized installations of scientific software stacks for a diverse s
 project consists of 3 layers, which are constructed by leveraging various open source software projects:
 % the filesystem layer to distribute the software stack; the compatibility layer to level the ground across different client operating systems; the software layer to run optimized applications and provided their dependencies.
 \begin{itemize}
-\item The filesystem layer uses CernVM-FS to distribute the EESSI software stack to client systems
-\item The compatibility layer levels the ground across different (versions of) the Linux operating system (OS)
-      of client systems that use the software installations provided by EESSI. It consists of a limited set of libraries
+\item The filesystem layer uses CernVM-FS to distribute the EESSI software stack to client systems.
+\item The compatibility layer levels the ground across the various versions of the Linux operating system
+      of the clients so that they can use the software installations provided by EESSI. It consists of a limited set of libraries
       and tools that are installed in a non-standard filesystem location (a "prefix"), which were built from source for
       the supported CPU families using Gentoo Prefix.
 \item The user-facing layer of EESSI is called the software layer, which contains the actual scientific software applications
