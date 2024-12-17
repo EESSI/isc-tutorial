@@ -26,13 +26,13 @@ the software they need for all of the computational platforms they have access t
 % Hence, an EESSI tutorial is very relevant to ISC'25 attendees as this tool helps relieve these burdens and fosters
 % collaboration.
 
-Winner of the HPCwire Readers’ Choice Awards in 2024 in the "Best HPC Programming Tool or Technology" category,\footnote{\href{https://www.hpcwire.com/2024-readers-editors-choice-best-hpc-programming-tool-or-technology/}{https://www.hpcwire.com/2024-readers-editors-choice-best-hpc-programming-tool-or-technology/}}
-the \textbf{European Environment for Scientific Software Installations (EESSI)}\footnote{\href{https://eessi.io}{https://eessi.io}}
+The \textbf{European Environment for Scientific Software Installations (EESSI)}\footnote{\href{https://eessi.io}{https://eessi.io}}
 project is a collaborative project
 between different partners in the HPC community (and supported by the MultiXscale EuroHPC Centre of Excellence) to build a
 common stack of optimised scientific software installations for everything from laptops to big HPC systems and cloud
 infrastructures. The project uses EasyBuild to install software on top of a compatibility layer, and leverages CernVM-FS to
-distribute the software installations to client systems.
+distribute the software installations to client systems. In 2024, it was selected as winner of the HPCwire Readers’ Choice Awards
+in the "Best HPC Programming Tool or Technology" category.\footnote{\href{https://www.hpcwire.com/2024-readers-editors-choice-best-hpc-programming-tool-or-technology/}{https://www.hpcwire.com/2024-readers-editors-choice-best-hpc-programming-tool-or-technology/}}
 
 EESSI is an initiative built on the foundations of the EasyBuild community, which is used by well over 100 HPC sites worldwide
 (incl. JSC, CSCS, the Digital Research Alliance of Canada, LUMI, \ldots), and goes one step further by providing a
@@ -65,7 +65,7 @@ To provide optimized installations of scientific software stacks for a diverse s
 project consists of 3 layers, which are constructed by leveraging various open source software projects:
 % the filesystem layer to distribute the software stack; the compatibility layer to level the ground across different client operating systems; the software layer to run optimized applications and provided their dependencies.
 \begin{itemize}
-\item The filesystem layer uses CernVM-FS to distribute the EESSI software stack to client systems
+\item The filesystem layer uses CernVM-FS to distribute the EESSI software stack to client systems.
 \item The compatibility layer levels the ground across the various versions of the Linux operating system
       of the clients so that they can use the software installations provided by EESSI. It consists of a limited set of libraries
       and tools that are installed in a non-standard filesystem location (a "prefix"), which were built from source for
