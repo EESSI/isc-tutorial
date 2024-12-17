@@ -1,32 +1,27 @@
-What if there was a way to avoid having to install a broad range of scientific software from scratch on every
+What if you could avoid installing a broad range of scientific software from scratch on every
 supercomputer, cloud instance, or laptop you use or maintain, without compromising on performance?
 
-Installing scientific software for supercomputers is known to be a tedious and time-consuming task. The application
-software stack continues to deepen as the
-High-Performance Computing (HPC) user community becomes more diverse, computational science expands rapidly, and the diversity of system architectures
-increases. Simultaneously, we see a surge in interest in public cloud
-infrastructures for scientific computing. Delivering optimised software installations and providing access to these
-installations in a reliable, user-friendly, and reproducible way is a highly non-trivial task that affects application
-developers, HPC user support teams, and the users themselves.
+Installing scientific software is known to be a tedious and time-consuming task. The software stack
+continues to deepen as computational science expands rapidly, the diversity of system architectures
+increases, and interest in public cloud infrastructures is surging.
+Providing access to optimised software installations in a reliable, user-friendly, and reproducible way
+is a highly non-trivial task that affects application developers, HPC user support teams, and the users themselves.
 
 Although scientific research on supercomputers is fundamentally software-driven,
-setting up and managing a software stack remains challenging and time-consuming.
-In addition, parallel filesystems like GPFS and Lustre are known to be ill-suited for hosting software installations
-that typically consist of a large number of small files. This can lead to surprisingly slow startup performance of
-software, and may even negatively impact the overall performance of the system.
-While workarounds for these issues such as using container images are prevalent, they come with caveats,
-such as the significant size of these images, the required compatibility with the system MPI for distributing computing,
-and complications with accessing specialized hardware resources like GPUs.
+setting up and managing a software stack remains challenging.
+Parallel filesystems like GPFS and Lustre are usually ill-suited for hosting software installations
+that involve a large number of small files, which can lead to slow software startup, and may even negatively impact
+overall system performance.
+While workarounds such as using container images are prevalent, they come with caveats,
+such as large image sizes, required compatibility with the system MPI,
+and issues with accessing GPUs.
 
-This tutorial aims to address these challenges by introducing the attendees to a way to \emph{stream}
-software installations via \emph{CernVM-FS}, a distributed read-only filesystem specifically designed
-to efficiently distribute software across large-scale computing infrastructures.
-The tutorial introduces the \emph{European Environment for Scientific Software Installations (EESSI)},
-a collaboration between various European HPC sites \& industry partners, with the common goal of
-creating a shared repository of optimised scientific software installations (\emph{not} recipes) that can be used on a variety of
+This tutorial aims to address these challenges by introducing (i) \emph{CernVM-FS},
+a distributed read-only filesystem designed to efficiently \emph{stream} software installations on-demand,
+and (ii) the \emph{European Environment for Scientific Software Installations (EESSI)},
+a shared repository of optimised scientific software installations (\emph{not} recipes) that can be used on a variety of
 systems, regardless of which flavor/version of Linux distribution or processor architecture is used, or whether it's a full size HPC
-cluster, a cloud environment or a personal workstation.
+cluster, a cloud environment, or a personal workstation.
 
-We cover the installation and configuration of CernVM-FS to access EESSI, the usage of EESSI, how to add software
-installations to EESSI, how to install software on top of EESSI, and advanced topics like GPU support and performance
-tuning.
+Its covers installing and configuring CernVM-FS, the usage of EESSI,
+installing software into and on top of EESSI, and advanced topics like GPU support and performance tuning.
