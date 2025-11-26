@@ -6,40 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
-      uses: actions/checkout@v4
-    - name: Compile LaTeX document (EESSI)
-      uses: xu-cheng/latex-action@f1ca82cbed861b3534e2997dd584944f55b884ed
+      uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3  # v6.0.0
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@25080975331dc4fc8e6f1af55788e00f84f51fff  # v4.0.0
       with:
-        working_directory: isc25/EESSI/
+        working_directory: isc26-EESSI/
         root_file: main.tex
         args: "-output-directory=build -pdf"
         latexmk_shell_escape: true
-    - name: Store produce PDFs (EESSI)
-      uses: actions/upload-artifact@v4
+    - name: Store produce PDFs
+      uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4  # v5.0.0
       with:
-        name: EESSI-ISC25-tutorial
-        path: isc25/EESSI/build/main.pdf
-    - name: Compile LaTeX document (CernVM-FS)
-      uses: xu-cheng/latex-action@f1ca82cbed861b3534e2997dd584944f55b884ed
-      with:
-        working_directory: isc24/CernVM-FS
-        root_file: main.tex
-        args: "-output-directory=build -pdf"
-        latexmk_shell_escape: true
-    - name: Store produce PDFs (CernVM-FS)
-      uses: actions/upload-artifact@v4
-      with:
-        name: CVMFS-ISC24-tutorial
-        path: isc24/CernVM-FS/build/main.pdf
-    - name: Compile LaTeX document (EESSI, SC24)
-      uses: xu-cheng/latex-action@f1ca82cbed861b3534e2997dd584944f55b884ed
-      with:
-        working_directory: sc24/EESSI
-        root_file: main.tex
-        args: "-output-directory=build -pdf"
-        latexmk_shell_escape: true
-    - name: Store produce PDFs (EESSI, SC24)
-      uses: actions/upload-artifact@v4
-      with:
-        name: EESSI-SC24-tutorial
-        path: sc24/EESSI/build/main.pdf
+        name: EESSI-ISC26-tutorial
+        path: isc26-EESSI/build/main.pdf
