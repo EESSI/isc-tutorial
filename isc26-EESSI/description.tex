@@ -6,9 +6,6 @@
 %- URLs to sample slides and other material\\
 %Upload Resume or CV of each presenter, including a list of the recently taught courses or tutorials (2 pages maximum per presenter). Please upload one pdf file that includes all presenters CVs.}
 
-
-\subsection*{Overview and Goals}
-
 Application developers, HPC sites, and researchers around the world
 spend significant amounts of time on optimised software installations.
 %Surveys conducted at the
@@ -42,15 +39,20 @@ attendees.
 % showcase its use on some large-scale systems,
 % and show how to engage with the EasyBuild community.
 
-The \textbf{European Environment for Scientific Software Installations
-(EESSI)}\footnote{\href{https://eessi.io}{https://eessi.io}} is a collaborative project
+\subsection*{EESSI: the European Environment for Scientific Software Installations}
+
+EESSI\footnote{\href{https://eessi.io}{https://eessi.io}} is a collaborative project
 between different partners in the HPC community, supported by the MultiXscale EuroHPC Centre of Excellence.
 It provides a common stack of optimised scientific software installations for everything from laptops to HPC systems and cloud
 infrastructures. The project combines existing well-established projects like
-EasyBuild\footnote{\href{https://easybuild.io}{https://easybuild.io}} to install software on top of a compatibility layer,
-Lmod\footnote{\href{https://lmod.readthedocs.io}{https://lmod.readthedocs.io}} to provide a user-friendly user interface to those installations,
-CernVM-FS\footnote{\href{https://cernvm.cern.ch/fs}{https://cernvm.cern.ch/fs}} to distribute the software installations to client systems,
-and ReFrame\footnote{\href{https://reframe-hpc.readthedocs.io}{https://reframe-hpc.readthedocs.io}} to test this shared software stack.
+%EasyBuild\footnote{\href{https://easybuild.io}{https://easybuild.io}} to install software on top of a compatibility layer,
+%Lmod\footnote{\href{https://lmod.readthedocs.io}{https://lmod.readthedocs.io}} to provide a user-friendly user interface to those installations,
+%CernVM-FS\footnote{\href{https://cernvm.cern.ch/fs}{https://cernvm.cern.ch/fs}} to distribute the software installations to client systems,
+%and ReFrame\footnote{\href{https://reframe-hpc.readthedocs.io}{https://reframe-hpc.readthedocs.io}} to test this shared software stack.
+\emph{EasyBuild} to install software on top of a compatibility layer,
+\emph{Lmod} to provide a user-friendly user interface to those installations,
+\emph{CernVM-FS} to distribute the software installations to client systems,
+and \emph{ReFrame} to test this shared software stack.
 
 %EasyBuild is used by well over 100 HPC sites worldwide (incl. JSC, CSCS, the Digital Research Alliance of Canada, LUMI,
 %\ldots),
@@ -65,20 +67,13 @@ and ReFrame\footnote{\href{https://reframe-hpc.readthedocs.io}{https://reframe-h
 % The tutorial content is designed to help with getting started quickly and benefit from EasyBuild right after the conference.
 %The tutorial content will be designed to help the attendees getting started with the tool, so they can immediately benefit from it after the conference.
 
-EESSI is an initiative built on the foundations of the EasyBuild community, which consists of hundreds of HPC sites and
-contributors around the world. It takes things a step further, beyond a tool to install scientific software (like
+It is an initiative built on the foundations of the EasyBuild community, which consists of hundreds of HPC sites and
+has attracted contributors from all around the world. EESSI takes things a step further, beyond a tool to install scientific software (like
 EasyBuild or Spack), by providing a ready-to-use uniform software stack that can be employed anywhere.
 
-The EESSI community has been growing quickly in the last couple of years; the EESSI Slack currently has over 500
-members.
-EESSI has been broadly embraced in the European HPC ecosystem, and is already available on dozens of HPC
-sites\footnote{\href{https://www.eessi.io/docs/systems/}{https://eessi.io/docs/systems}}, including several of the 
-EuroHPC JU supercomputers.
+\subsection*{Motivation}
 
-%It goes one step further by providing a truly uniform software stack.
-%It already has a wide spectrum of collaborators despite being a relatively young project.
-
-It is motivated by the observation that the landscape of computational science is changing in various ways.
+The motivation for EESSI is the observation that the landscape of computational science is changing in various ways.
 Additional families of general-purpose microprocessors including Arm 64-bit (aarch64) and RISC-V on top of
 well-established Intel and AMD processors (both x86\_64), and different types of GPUS (NVIDIA, AMD, Intel) are
 increasing the diversity in system architectures. The rapid expansion of computational science beyond traditional
@@ -93,9 +88,12 @@ These reasons indicate that there is a strong need for more collaboration on
 building and installing scientific software to avoid duplicate work across researchers, software developers,
 and HPC user support teams.
 
+%It goes one step further by providing a truly uniform software stack.
+%It already has a wide spectrum of collaborators despite being a relatively young project.
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.65\textwidth]{eessi-high-level-overview.png}
+    \includegraphics[width=0.69\textwidth]{eessi-high-level-overview.png}
     \caption{A high-level overview of the EESSI project.}
     \label{fig:eessi-high-level-overview}
 \end{figure}
@@ -108,9 +106,13 @@ Software installations included in EESSI are optimized for specific generations 
 variety of instruction set architectures (ISAs), like for example \texttt{x86\_64} processors supporting the
 AVX-512 instruction set, and Arm processors that support SVE instructions.
 
-To provide optimized installations of scientific software stacks for a diverse set of system architectures, the EESSI
-project consists of 3 layers, which are constructed by leveraging various established open source software projects,
-see Figure~\ref{fig:eessi-high-level-overview}.
+%To provide optimized installations of scientific software stacks for a diverse set of system architectures, the EESSI
+%project consists of 3 layers, which are constructed by leveraging various established open source software projects,
+%see Figure~\ref{fig:eessi-high-level-overview}.
+To provide optimized installations of scientific software stacks for a diverse set of system architectures
+The high-level design of EESSI consists of 3 layers, which are constructed by leveraging various established open source software projects,
+see Figure~\ref{fig:eessi-high-level-overview}. At the time of writing, EESSI includes over 600 different software projects
+and supports 14 different CPU microarchitectures, which totals to over 16,000 software installations.
 % the filesystem layer to distribute the software stack; the compatibility layer to level the ground across different client operating systems; the software layer to run optimized applications and provided their dependencies.
 %\begin{itemize}
 %\item The filesystem layer uses CernVM-FS to distribute the EESSI software stack to client systems
@@ -156,9 +158,25 @@ see Figure~\ref{fig:eessi-high-level-overview}.
 
 % The tutorial covers motivation, goals and the high-level design of EESSI, as well as the usage through hands-on demos and guided examples. It showcases the main features and capabilities, and also describes the various ways to access EESSI: native, as a production setup in HPC as well as without administrator rights. Next we cover how to different use cases of EESSI, such as portable worksflows, within a CI as well as adding software to EESSI. Troubleshooting access, Testing of the software and Performance evaluation of EESSI will also be covered. Extensive guided examples help consolidate the theory in real knowledge.
 
-The tutorial is an introduction to EESSI, including its motivation, goals, high-level design, and the use cases it
-enables (like portable workflows, using it in a CI environment, building software on top of it, etc.).
+\subsection*{EESSI Community + Recognition and Adoption}
 
+The EESSI community has been growing quickly in the last couple of years; the EESSI Slack currently has over 500
+members.
+At Supercomputing 2024, EESSI received the \textbf{HPCWire Readers' Choice Award}
+in the ``Best HPC Programming Tool or Technology"
+category.\footnote{\href{https://www.eessi.io/docs/blog/2024/09/20/hpcwire-readers-choice-awards-2024/}{https://www.eessi.io/docs/blog/2024/09/20/hpcwire-readers-choice-awards-2024/}}
+
+EESSI has been broadly embraced in the European HPC ecosystem, and is already available on dozens of HPC
+sites, including several of the EuroHPC JU
+supercomputers.\footnote{\href{https://www.eessi.io/docs/systems/}{https://eessi.io/docs/systems}}
+In addition, it is currently being integrated in the upcoming \textbf{EuroHPC Federation Platform
+(EFP)}\footnote{\href{https://my-eurohpc.eu}{https://my-eurohpc.eu}},
+as the base for the Federated Software Catalogue.
+
+\subsection*{Tutorial scope and organisation}
+
+This tutorial is an introduction to EESSI, including its motivation, goals, high-level design, and the use cases it
+enables (like portable workflows, using it in a CI environment, building software on top of it, etc.).
 Through guided hands-on exercises attendees will get a thorough understanding of the basics,
 and be incentived and empowered to learn more and apply it in their own daily workflow.
 
