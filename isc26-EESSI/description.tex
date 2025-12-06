@@ -71,7 +71,7 @@ It is an initiative built on the foundations of the EasyBuild community, which c
 has attracted contributors from all around the world. EESSI takes things a step further, beyond a tool to install scientific software (like
 EasyBuild or Spack), by providing a ready-to-use uniform software stack that can be employed anywhere.
 
-\subsection*{Motivation}
+\subsection*{Motivation \& goal}
 
 The motivation for EESSI is the observation that the landscape of computational science is changing in various ways.
 Additional families of general-purpose microprocessors including Arm 64-bit (aarch64) and RISC-V on top of
@@ -111,8 +111,8 @@ AVX-512 instruction set, and Arm processors that support SVE instructions.
 %see Figure~\ref{fig:eessi-high-level-overview}.
 To provide optimized installations of scientific software stacks for a diverse set of system architectures
 The high-level design of EESSI consists of 3 layers, which are constructed by leveraging various established open source software projects,
-see Figure~\ref{fig:eessi-high-level-overview}. At the time of writing, EESSI includes over 600 different software projects
-and supports 14 different CPU microarchitectures, which totals to over 16,000 software installations.
+see Figure~\ref{fig:eessi-high-level-overview}. At the time of writing, EESSI includes over 600 unique software projects
+and supports 14 different CPU microarchitectures and 3 generations of NVIDIA GPUs, which totals to over 16,000 software installations.
 % the filesystem layer to distribute the software stack; the compatibility layer to level the ground across different client operating systems; the software layer to run optimized applications and provided their dependencies.
 %\begin{itemize}
 %\item The filesystem layer uses CernVM-FS to distribute the EESSI software stack to client systems
@@ -169,16 +169,17 @@ category.\footnote{\href{https://www.eessi.io/docs/blog/2024/09/20/hpcwire-reade
 EESSI has been broadly embraced in the European HPC ecosystem, and is already available on dozens of HPC
 sites, including several of the EuroHPC JU
 supercomputers.\footnote{\href{https://www.eessi.io/docs/systems/}{https://eessi.io/docs/systems}}
+
 In addition, it is currently being integrated in the upcoming \textbf{EuroHPC Federation Platform
 (EFP)}\footnote{\href{https://my-eurohpc.eu}{https://my-eurohpc.eu}},
-as the base for the Federated Software Catalogue.
+as the Federated Software Catalogue that will provide a uniform software stack.
 
 \subsection*{Tutorial scope and organisation}
 
-This tutorial is an introduction to EESSI, including its motivation, goals, high-level design, and the use cases it
-enables (like portable workflows, using it in a CI environment, building software on top of it, etc.).
+This tutorial is an introduction to EESSI, covering its motivation, goals, high-level design, and the use cases it
+enables (like portable workflows, usage a CI environment, building software on top of it, etc.).
 Through guided hands-on exercises attendees will get a thorough understanding of the basics,
-and be incentived and empowered to learn more and apply it in their own daily workflow.
+and be incentived and empowered to learn more and use it in their own daily workflow.
 
 %The main features and functionalities of EESSI are highlighted, as well as the different ways to access the software stack, such as native installation, use in an HPC
 %production setup, or without administrator privileges.
@@ -215,8 +216,8 @@ and be incentived and empowered to learn more and apply it in their own daily wo
 % (fully online, half-day) at ISC'21 which was well attended with over 25 participants and in-person (half-day) at ISC'22 with about 20 participants.
 % The feedback and attendance has always been positive, which is the primary motivation for this tutorial proposal. The organisers have been actively training user support staff and administrators on EasyBuild in various events in the US and Europe since 2011.
 
-The tutorials organisers have successfully and extensively worked together on several presentations,
-events, and hands-on tutorial and workshops on the topic under consideration several times in recent years.
+The tutorial organisers have successfully and extensively worked together on several presentations,
+events, and hands-on tutorials and workshops on the topic under consideration several times in recent years.
 A common template
 %will be created to guarantee
 will guarantee
